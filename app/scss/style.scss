@@ -6,6 +6,7 @@
 .header {
   position: relative;
   z-index: 1;
+  margin-bottom: 150px;
   min-height: 75vh;
   background-image: url(../images/bg-header.jpg);
   background-position: center;
@@ -141,7 +142,54 @@
 }
 
 .strategy {
+  margin-bottom: 100px;
+
   &-items {
     display: flex;
+  }
+
+  &-title {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  &-item {
+    position: relative;
+    padding-top: 75px;
+    width: 25%;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: center;
+
+    p {
+      font-size: 17px;
+    }
+  }
+
+  &-item::before {
+    content: "";
+    position: absolute;
+    left: 39%;
+    top: 5px;
+    width: 67px;
+    height: 69px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  &-item--personal::before {
+    background-image: url(../images/strategy/mentor.svg);
+  }
+
+  &-item--method::before {
+    background-image: url(../images/strategy/clock.svg);
+  }
+
+  &-item--reach::before {
+    background-image: url(../images/strategy/computer.svg);
+  }
+
+  &-item--result::before {
+    background-image: url(../images/strategy/wallet.svg);
   }
 }
